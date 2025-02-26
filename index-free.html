@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brutalist - Neubrutalism Portfolio Tailwind</title>
+  <!-- Add Tailwind CSS (online development) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom styles (npm/tools is required) -->
+  <link rel="stylesheet" href="src/css/style.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon.jpeg">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@500;900&amp;display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Playpen Sans, 'sans serif'
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 pt-[96px]">
+  <!-- Header -->
+  <header
+    class="fixed inset-x-0 z-40 top-0 bg-white text-black h-[96px] py-5 lg:py-6 border-t-2 border-b-2 border-black">
+    <div class="container px-4 lg:px-8 mx-auto flex justify-between items-center">
+      <div class="text-3xl font-extrabold">Chore</div>
+      <!-- toggle -->
+      <button data-toggle="#target-nav"
+        class="[&.show_.btn-open]:!hidden [&.show_.btn-close]:!block w-12 h-12 flex items-center justify-center border-2 border-black rounded lg:hidden shadow-[2px_2px_0_0_#000000]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+          class="btn-open block bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+        </svg>
+        <!-- close -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+          class="btn-close hidden bi bi-x-lg" viewBox="0 0 16 16">
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+        </svg>
+      </button>
+
+      <!-- navbar -->
+      <div id="target-nav"
+        class="uppercase max-lg:fixed max-lg:w-72 max-lg:inset-y-0 max-lg:left-0 max-lg:[&.show]:translate-x-0 max-lg:bg-white max-lg:border-r-2 max-lg:border-black max-lg:z-50 max-lg:-translate-x-full transform duration-300">
+        <nav class="max-lg:flex max-lg:flex-col max-lg:h-full max-lg:overflow-auto lg:space-x-4">
+          <a href="#"
+            class="active max-lg:py-3 max-lg:px-4 max-lg:border-b max-lg:border-black hover:text-[#00a6a2] [&.active]:text-[#00a6a2]">Home</a>
+          <a href="#"
+            class="max-lg:py-3 max-lg:px-4 max-lg:border-b max-lg:border-black hover:text-[#00a6a2] [&.active]:text-[#00a6a2]">Sobre mi</a>
+          <a href="#"
+            class="max-lg:py-3 max-lg:px-4 max-lg:border-b max-lg:border-black hover:text-[#00a6a2] [&.active]:text-[#00a6a2]">Trabajos</a>
+          <a href="#"
+            class="max-lg:py-3 max-lg:px-4 max-lg:border-b max-lg:border-black hover:text-[#00a6a2] [&.active]:text-[#00a6a2]">Testimonios</a>
+          <a href="#"
+            class="max-lg:py-3 max-lg:px-4 max-lg:border-b max-lg:border-black hover:text-[#00a6a2] [&.active]:text-[#00a6a2]">Contacto</a>
+        </nav>
+      </div>
+
+      <!-- bg mobile sidebar -->
+      <button data-toggle="#target-nav"
+        class="max-lg:fixed max-lg:bg-black max-lg:[&.show]:inset-0 max-lg:opacity-0 max-lg:[&.show]:opacity-70 transform duration-300 lg:hidden"></button>
+    </div>
+  </header>
+
+  <main class="overflow-hidden">
+    <!-- hero start -->
+    <section id="hero" class="relative bg-neutral-100 border-b-2 border-black overflow-hidden z-0">
+      <div class="absolute inset-y-0 right-auto left-0 h-full w-1/2 bg-[#fec494]" style="z-index: -1;"></div>
+      <!-- background overlay -->
+      <div style="background-image: url(src/img/cartographer.png);"
+        class="absolute top-0 right-0 left-auto w-full md:w-1/2 h-full bg-[#02d1c3]" style="z-index:-1;"></div>
+
+      <div class="container px-4 lg:px-8 mx-auto">
+        <!-- row -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+          <!-- hero image -->
+          <div class="hidden md:block order-2 lg:pl-12">
+            <figure class="relative transform duration-1000 opacity-0 scale-75 delay-100"
+              data-view="!opacity-100 !scale-100">
+              <svg viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#FF0066" stroke="black" stroke-width="1"
+                  d="M36.3,-63.1C48.1,-56.1,59.4,-48.5,62.3,-37.9C65.3,-27.2,59.7,-13.6,59.1,-0.3C58.5,12.9,62.9,25.9,60.4,37.2C57.9,48.5,48.6,58.3,37.4,61.4C26.2,64.5,13.1,61,1.7,58.1C-9.7,55.2,-19.4,52.9,-33.8,51.6C-48.2,50.3,-67.2,50,-69.1,41.6C-71.1,33.2,-55.9,16.6,-55.1,0.5C-54.3,-15.7,-67.9,-31.4,-67.4,-42.1C-66.8,-52.9,-52,-58.7,-38.4,-64.7C-24.8,-70.6,-12.4,-76.8,-0.1,-76.6C12.3,-76.5,24.5,-70.1,36.3,-63.1Z"
+                  transform="translate(100 100)" />
+                <defs>
+                  <clipPath id="ones">
+                    <path fill="#FF0066"
+                      d="M36.3,-63.1C48.1,-56.1,59.4,-48.5,62.3,-37.9C65.3,-27.2,59.7,-13.6,59.1,-0.3C58.5,12.9,62.9,25.9,60.4,37.2C57.9,48.5,48.6,58.3,37.4,61.4C26.2,64.5,13.1,61,1.7,58.1C-9.7,55.2,-19.4,52.9,-33.8,51.6C-48.2,50.3,-67.2,50,-69.1,41.6C-71.1,33.2,-55.9,16.6,-55.1,0.5C-54.3,-15.7,-67.9,-31.4,-67.4,-42.1C-66.8,-52.9,-52,-58.7,-38.4,-64.7C-24.8,-70.6,-12.4,-76.8,-0.1,-76.6C12.3,-76.5,24.5,-70.1,36.3,-63.1Z"
+                      transform="translate(100 100)" />
+                  </clipPath>
+                </defs>
+                <image transform="matrix(1 0 0 1 0 0)" clip-path="url(#ones)" xlink:href="src/img/perfil.jpg" width="235"
+                  height="200"></image>
+              </svg>
+            </figure>
+          </div>
+
+          <!-- hero content -->
+          <div class="order-1 xl:pr-12 xl:py-16">
+            <div
+              class="text-left lg:mr-8 py-16 md:pb-0 lg:py-16 transform duration-1000 opacity-0 translate-y-8 delay-100"
+              data-view="!opacity-100 !translate-y-0">
+              <h1 class="text-4xl lg:text-5xl leading-tight font-bold text-black mb-6">Me Preseneto Soy Edgar Rubio
+
+                Soy Alcohilico</h1>
+              <p class="text-gray-800 leading-relaxed font-light text-xl mx-auto mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad debitis aspernatur suscipit, delectus dolore expedita nemo asperiores culpa velit reiciendis tempora impedit laudantium nulla quidem sapiente consequuntur ipsam tempore ex!</p>
+
+              <a class="py-3 px-4 relative inline-flex flex-row items-center justify-center gap-x-2 rounded font-bold text-lg tracking-[.00714em] border-2 border-black hover:-translate-y-0.5 transform duration-200 shadow-[4px_4px_0_0_#000000] focus:-translate-y-0.5 bg-yellow-300 text-black"
+                href="#">
+                Sobre Mi
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                  class="bi bi-arrow-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- marque -->
+    <section class="border-b-2 border-black">
+      <div class="marquee py-3 text-2xl font-bold w-full">
+        <a href="works.html">Bienbenido ami portafolio edgar rubio a sus ordenes</a>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="bg-white py-16">
+      <div class="container px-4 lg:px-8 mx-auto">
+        <h2 class="text-3xl font-bold mb-8">Proyectos y Pasiones</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project Card -->
+          <div
+            class="relative bg-white rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000] overflow-hidden transform duration-700 opacity-0 translate-y-20"
+            data-view="!opacity-100 !translate-y-0">
+            <a href="src/img/edgar.png" data-gallery="gallery1">
+              <img src="src/img/edgar.png" alt="Project 1" class="glightbox3 w-full hover:scale-110 duration-1000">
+            </a>
+            <!-- toggle -->
+            <button data-toggle="#catalog1"
+              class="absolute [&.show]:!hidden left-2 text-sm bottom-2 py-2 px-4 bg-black opacity-90 text-white rounded">Expandir</button>
+            <button data-toggle="#catalog1"
+              class="absolute [&.show]:!flex hidden right-2 text-sm top-2 w-10 h-10 items-center justify-center bg-white text-black border-2 border-black opacity-90 rounded-full z-20">x</button>
+            <!-- info -->
+            <div id="catalog1"
+              class="absolute [&.show]:!translate-y-0 [&.show]:!opacity-100 inset-4 bg-black opacity-0 text-white p-6 rounded-lg translate-y-[120%] transform duration-300 scrollbars overflow-auto">
+              <h3 class="text-lg font-bold uppercase mb-4">El futbol Una de mis Grandes Pasiones</h3>
+              <p>Redesigned the logo for XYZ Company to give it a modern and vibrant look that reflects their brand
+                identity.</p>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div
+            class="relative bg-white rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000] overflow-hidden transform duration-700 opacity-0 translate-y-20 delay-200"
+            data-view="!opacity-100 !translate-y-0">
+            <a href="src/img/edgar2.png" data-gallery="gallery1">
+              <img src="src/img/edgar2.png" alt="Project 2" class="glightbox3 w-full hover:scale-110 duration-1000">
+            </a>
+            <!-- toggle -->
+            <button data-toggle="#catalog2"
+              class="absolute [&.show]:!hidden left-2 text-sm bottom-2 py-2 px-4 bg-black opacity-90 text-white rounded">Detail</button>
+            <button data-toggle="#catalog2"
+              class="absolute [&.show]:!flex hidden right-2 text-sm top-2 w-10 h-10 items-center justify-center bg-white text-black border-2 border-black opacity-90 rounded-full z-20">x</button>
+            <!-- info -->
+            <div id="catalog2"
+              class="absolute [&.show]:!translate-y-0 [&.show]:!opacity-100 inset-4 bg-black opacity-0 text-white p-6 rounded-lg translate-y-[120%] transform duration-300 scrollbars overflow-auto">
+              <h3 class="text-lg font-bold uppercase mb-4">Branding Package for ABC Startup</h3>
+              <p>Developed a comprehensive branding package for ABC Startup, including a new logo, business cards, and
+                marketing materials.</p>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div
+            class="relative bg-white rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000] overflow-hidden transform duration-700 opacity-0 translate-y-20 delay-500"
+            data-view="!opacity-100 !translate-y-0">
+            <a href="src/img/works/3.jpg" data-gallery="gallery1">
+              <img src="src/img/works/3.jpg" alt="Project 3" class="glightbox3 w-full hover:scale-110 duration-1000">
+            </a>
+            <!-- toggle -->
+            <button data-toggle="#catalog3"
+              class="absolute [&.show]:!hidden left-2 text-sm bottom-2 py-2 px-4 bg-black opacity-90 text-white rounded">Detail</button>
+            <button data-toggle="#catalog3"
+              class="absolute [&.show]:!flex hidden right-2 text-sm top-2 w-10 h-10 items-center justify-center bg-white text-black border-2 border-black opacity-90 rounded-full z-20">x</button>
+            <!-- info -->
+            <div id="catalog3"
+              class="absolute [&.show]:!translate-y-0 [&.show]:!opacity-100 inset-4 bg-black opacity-0 text-white p-6 rounded-lg translate-y-[120%] transform duration-300 scrollbars overflow-auto">
+              <h3 class="text-lg font-bold uppercase mb-4">Print Campaign for Events and Promotions</h3>
+              <p>Designed a series of eye-catching print materials for events and promotions, ensuring a cohesive and
+                memorable brand presence.</p>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div
+            class="relative bg-white rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000] overflow-hidden transform duration-700 opacity-0 translate-y-20"
+            data-view="!opacity-100 !translate-y-0">
+            <a href="src/img/works/4.jpg" data-gallery="gallery1">
+              <img src="src/img/works/4.jpg" alt="Project 4" class="glightbox3 w-full hover:scale-110 duration-1000">
+            </a>
+            <!-- toggle -->
+            <button data-toggle="#catalog4"
+              class="absolute [&.show]:!hidden left-2 text-sm bottom-2 py-2 px-4 bg-black opacity-90 text-white rounded">Detail</button>
+            <button data-toggle="#catalog4"
+              class="absolute [&.show]:!flex hidden right-2 text-sm top-2 w-10 h-10 items-center justify-center bg-white text-black border-2 border-black opacity-90 rounded-full z-20">x</button>
+            <!-- info -->
+            <div id="catalog4"
+              class="absolute [&.show]:!translate-y-0 [&.show]:!opacity-100 inset-4 bg-black opacity-0 text-white p-6 rounded-lg translate-y-[120%] transform duration-300 scrollbars overflow-auto">
+              <h3 class="text-lg font-bold uppercase mb-4">Website UI/UX for Tech Innovations</h3>
+              <p>Created a modern and user-friendly UI/UX design for the website of Tech Innovations, enhancing user
+                engagement and satisfaction.</p>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div
+            class="relative bg-white rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000] overflow-hidden transform duration-700 opacity-0 translate-y-20 delay-200"
+            data-view="!opacity-100 !translate-y-0">
+            <a href="src/img/works/5.jpg" data-gallery="gallery1">
+              <img src="src/img/works/5.jpg" alt="Project 5" class="glightbox3 w-full hover:scale-110 duration-1000">
+            </a>
+            <!-- toggle -->
+            <button data-toggle="#catalog5"
+              class="absolute [&.show]:!hidden left-2 text-sm bottom-2 py-2 px-4 bg-black opacity-90 text-white rounded">Detail</button>
+            <button data-toggle="#catalog5"
+              class="absolute [&.show]:!flex hidden right-2 text-sm top-2 w-10 h-10 items-center justify-center bg-white text-black border-2 border-black opacity-90 rounded-full z-20">x</button>
+            <!-- info -->
+            <div id="catalog5"
+              class="absolute [&.show]:!translate-y-0 [&.show]:!opacity-100 inset-4 bg-black opacity-0 text-white p-6 rounded-lg translate-y-[120%] transform duration-300 scrollbars overflow-auto">
+              <h3 class="text-lg font-bold uppercase mb-4">Social Media Graphics for Lifestyle Brand</h3>
+              <p>Developed visually appealing graphics for a lifestyle brand's social media channels, increasing brand
+                visibility and engagement.</p>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div
+            class="relative bg-white rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000] overflow-hidden transform duration-700 opacity-0 translate-y-20 delay-500"
+            data-view="!opacity-100 !translate-y-0">
+            <a href="src/img/works/6.jpg" data-gallery="gallery1">
+              <img src="src/img/works/6.jpg" alt="Project 6" class="glightbox3 w-full hover:scale-110 duration-1000">
+            </a>
+            <!-- toggle -->
+            <button data-toggle="#catalog6"
+              class="absolute [&.show]:!hidden left-2 text-sm bottom-2 py-2 px-4 bg-black opacity-90 text-white rounded">Detail</button>
+            <button data-toggle="#catalog6"
+              class="absolute [&.show]:!flex hidden right-2 text-sm top-2 w-10 h-10 items-center justify-center bg-white text-black border-2 border-black opacity-90 rounded-full z-20">x</button>
+            <!-- info -->
+            <div id="catalog6"
+              class="absolute [&.show]:!translate-y-0 [&.show]:!opacity-100 inset-4 bg-black opacity-0 text-white p-6 rounded-lg translate-y-[120%] transform duration-300 scrollbars overflow-auto">
+              <h3 class="text-lg font-bold uppercase mb-4">Packaging Design for Organic Products</h3>
+              <p>Crafted eco-friendly and attractive packaging designs for a line of organic products, emphasizing
+                sustainability and brand appeal.</p>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div
+            class="relative bg-white rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000] overflow-hidden transform duration-700 opacity-0 translate-y-20"
+            data-view="!opacity-100 !translate-y-0">
+            <a href="src/img/works/7.jpg" data-gallery="gallery1">
+              <img src="src/img/works/7.jpg" alt="Project 7" class="glightbox3 w-full hover:scale-110 duration-1000">
+            </a>
+            <!-- toggle -->
+            <button data-toggle="#catalog7"
+              class="absolute [&.show]:!hidden left-2 text-sm bottom-2 py-2 px-4 bg-black opacity-90 text-white rounded">Detail</button>
+            <button data-toggle="#catalog7"
+              class="absolute [&.show]:!flex hidden right-2 text-sm top-2 w-10 h-10 items-center justify-center bg-white text-black border-2 border-black opacity-90 rounded-full z-20">x</button>
+            <!-- info -->
+            <div id="catalog7"
+              class="absolute [&.show]:!translate-y-0 [&.show]:!opacity-100 inset-4 bg-black opacity-0 text-white p-6 rounded-lg translate-y-[120%] transform duration-300 scrollbars overflow-auto">
+              <h3 class="text-lg font-bold uppercase mb-4">Logo Redesign for XYZ Company</h3>
+              <p>Redesigned the logo for XYZ Company to give it a modern and vibrant look that reflects their brand
+                identity.</p>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div
+            class="relative bg-white rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000] overflow-hidden transform duration-700 opacity-0 translate-y-20 delay-200"
+            data-view="!opacity-100 !translate-y-0">
+            <a href="src/img/works/8.jpg" data-gallery="gallery1">
+              <img src="src/img/works/8.jpg" alt="Project 8" class="glightbox3 w-full hover:scale-110 duration-1000">
+            </a>
+            <!-- toggle -->
+            <button data-toggle="#catalog8"
+              class="absolute [&.show]:!hidden left-2 text-sm bottom-2 py-2 px-4 bg-black opacity-90 text-white rounded">Detail</button>
+            <button data-toggle="#catalog8"
+              class="absolute [&.show]:!flex hidden right-2 text-sm top-2 w-10 h-10 items-center justify-center bg-white text-black border-2 border-black opacity-90 rounded-full z-20">x</button>
+            <!-- info -->
+            <div id="catalog8"
+              class="absolute [&.show]:!translate-y-0 [&.show]:!opacity-100 inset-4 bg-black opacity-0 text-white p-6 rounded-lg translate-y-[120%] transform duration-300 scrollbars overflow-auto">
+              <h3 class="text-lg font-bold uppercase mb-4">Branding Package for ABC Startup</h3>
+              <p>Developed a comprehensive branding package for ABC Startup, including a new logo, business cards, and
+                marketing materials.</p>
+            </div>
+          </div>
+
+          <!-- Project Card -->
+          <div
+            class="relative bg-white rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000] overflow-hidden transform duration-700 opacity-0 translate-y-20 delay-500"
+            data-view="!opacity-100 !translate-y-0">
+            <a href="src/img/works/9.jpg" data-gallery="gallery1">
+              <img src="src/img/works/9.jpg" alt="Project 9" class="glightbox3 w-full hover:scale-110 duration-1000">
+            </a>
+            <!-- toggle -->
+            <button data-toggle="#catalog9"
+              class="absolute [&.show]:!hidden left-2 text-sm bottom-2 py-2 px-4 bg-black opacity-90 text-white rounded">Detail</button>
+            <button data-toggle="#catalog9"
+              class="absolute [&.show]:!flex hidden right-2 text-sm top-2 w-10 h-10 items-center justify-center bg-white text-black border-2 border-black opacity-90 rounded-full z-20">x</button>
+            <!-- info -->
+            <div id="catalog9"
+              class="absolute [&.show]:!translate-y-0 [&.show]:!opacity-100 inset-4 bg-black opacity-0 text-white p-6 rounded-lg translate-y-[120%] transform duration-300 scrollbars overflow-auto">
+              <h3 class="text-lg font-bold uppercase mb-4">Print Campaign for Events</h3>
+              <p>Designed a series of eye-catching print materials for events and promotions, ensuring a cohesive and
+                memorable brand presence.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="bg-white pt-4 pb-16">
+      <div class="container px-4 lg:px-8 mx-auto">
+        <h2 class="text-3xl font-bold mb-8">Trabajos</h2>
+
+        <div
+          class="p-8 border-2 border-black bg-purple-300 rounded-xl shadow-[6px_6px_0_0_#000000] transform duration-700 opacity-0 translate-y-20 delay-200"
+          data-view="!opacity-100 !translate-y-0">
+          <div class="grid grid-cols-1 lg:grid-cols-2 max-lg:gap-10 gap-8">
+            <!-- Service Card 1 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+              <div>
+                <div
+                  class="relative flex items-center justify-center w-20 h-20 max-sm:mb-2 text-black p-6 bg-black rounded-lg border-2 border-black shadow-[8px_8px_0_0_#000000]">
+                  <!-- icon -->
+                  <svg viewBox="0 0 91 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.05 8.11L7.02 4.06 0 8.1V4.06L7.03 0l7.02 4.06V8.1z" fill="#A435F0"/><path d="M0 11.52h3.68v8.94a3.27 3.27 0 003.35 3.44 3.3 3.3 0 003.34-3.47v-8.91h3.68v9.15c0 2.13-.67 3.77-2 4.9a7.55 7.55 0 01-5.06 1.67 7.4 7.4 0 01-5.01-1.67C.67 24.44 0 22.87 0 20.77v-9.25zm45.87 11.11a5.57 5.57 0 01-3.83 1.48c-2.64 0-4.41-1.5-4.61-3.83h11.89s.08-.76.08-1.46c0-2.2-.7-4.02-2.13-5.5a7.13 7.13 0 00-5.45-2.23 7.9 7.9 0 00-5.78 2.22 7.93 7.93 0 00-2.25 5.87v.12c0 2.4.76 4.32 2.25 5.75a8.17 8.17 0 005.87 2.16c2.8 0 5.02-1.1 6.69-3l-2.73-1.58zm-7-7.46a4.7 4.7 0 012.95-.98c1.07 0 1.95.34 2.7 1a3 3 0 011.16 2.23h-8.16c.12-.9.57-1.64 1.35-2.25zm44.04 14.1C81.41 32.8 79.86 34 77.46 34H75.8v-3.26h1.34c.83 0 1.6-.31 2.32-2l.73-1.68-6.3-15.54h3.75L82.1 22.7l4.6-11.2h3.73L82.9 29.27zM28.38 5.66v7.26a7.58 7.58 0 00-4.9-1.73c-2.16 0-3.98.76-5.47 2.31a7.87 7.87 0 00-2.2 5.69 8 8 0 002.2 5.72 7.37 7.37 0 005.47 2.28c2.5 0 4.06-.98 4.9-1.75v1.42h3.65V5.65h-3.65zm-1.1 16.88c-.88.88-2 1.34-3.31 1.34a4.4 4.4 0 01-3.26-1.34c-.85-.89-1.27-2.01-1.27-3.35 0-1.34.42-2.46 1.27-3.34.88-.89 1.95-1.34 3.26-1.34s2.43.45 3.31 1.34c.91.88 1.37 2 1.37 3.34 0 1.34-.46 2.47-1.37 3.35zM68.22 11.2a6.39 6.39 0 00-5.2 2.26c-.4-.75-1.5-2.26-4.1-2.26a5.17 5.17 0 00-4.14 1.9v-1.59h-3.62v15.33h3.62v-8.82c0-2.07 1.28-3.56 2.98-3.56 1.74 0 2.74 1.3 2.74 3.4v8.98h3.62v-8.82c0-2.1 1.24-3.56 3.04-3.56 1.73 0 2.73 1.3 2.73 3.4v8.97h3.65v-9.48c0-4-2.14-6.15-5.32-6.15z" fill="#fff"/></svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-1 md:mb-2">reportaje Sobre Udemy</h3>
+                <p class="text-gray-700">realize un reportaje sobre la plataforma udemy</p>
+              </div>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+              <div>
+                <div
+                  class="relative flex items-center justify-center w-20 h-20 max-sm:mb-2 text-black p-6 bg-[#02d1c3] rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000]">
+                  <!-- icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-fingerprint" viewBox="0 0 16 16">
+                    <path
+                      d="M8.06 6.5a.5.5 0 0 1 .5.5v.776a11.5 11.5 0 0 1-.552 3.519l-1.331 4.14a.5.5 0 0 1-.952-.305l1.33-4.141a10.5 10.5 0 0 0 .504-3.213V7a.5.5 0 0 1 .5-.5Z" />
+                    <path
+                      d="M6.06 7a2 2 0 1 1 4 0 .5.5 0 1 1-1 0 1 1 0 1 0-2 0v.332c0 .409-.022.816-.066 1.221A.5.5 0 0 1 6 8.447c.04-.37.06-.742.06-1.115zm3.509 1a.5.5 0 0 1 .487.513 11.5 11.5 0 0 1-.587 3.339l-1.266 3.8a.5.5 0 0 1-.949-.317l1.267-3.8a10.5 10.5 0 0 0 .535-3.048A.5.5 0 0 1 9.569 8Zm-3.356 2.115a.5.5 0 0 1 .33.626L5.24 14.939a.5.5 0 1 1-.955-.296l1.303-4.199a.5.5 0 0 1 .625-.329Z" />
+                    <path
+                      d="M4.759 5.833A3.501 3.501 0 0 1 11.559 7a.5.5 0 0 1-1 0 2.5 2.5 0 0 0-4.857-.833.5.5 0 1 1-.943-.334Zm.3 1.67a.5.5 0 0 1 .449.546 10.72 10.72 0 0 1-.4 2.031l-1.222 4.072a.5.5 0 1 1-.958-.287L4.15 9.793a9.72 9.72 0 0 0 .363-1.842.5.5 0 0 1 .546-.449Zm6 .647a.5.5 0 0 1 .5.5c0 1.28-.213 2.552-.632 3.762l-1.09 3.145a.5.5 0 0 1-.944-.327l1.089-3.145c.382-1.105.578-2.266.578-3.435a.5.5 0 0 1 .5-.5Z" />
+                    <path
+                      d="M3.902 4.222a4.996 4.996 0 0 1 5.202-2.113.5.5 0 0 1-.208.979 3.996 3.996 0 0 0-4.163 1.69.5.5 0 0 1-.831-.556Zm6.72-.955a.5.5 0 0 1 .705-.052A4.99 4.99 0 0 1 13.059 7v1.5a.5.5 0 1 1-1 0V7a3.99 3.99 0 0 0-1.386-3.028.5.5 0 0 1-.051-.705ZM3.68 5.842a.5.5 0 0 1 .422.568c-.029.192-.044.39-.044.59 0 .71-.1 1.417-.298 2.1l-1.14 3.923a.5.5 0 1 1-.96-.279L2.8 8.821A6.531 6.531 0 0 0 3.058 7c0-.25.019-.496.054-.736a.5.5 0 0 1 .568-.422Zm8.882 3.66a.5.5 0 0 1 .456.54c-.084 1-.298 1.986-.64 2.934l-.744 2.068a.5.5 0 0 1-.941-.338l.745-2.07a10.51 10.51 0 0 0 .584-2.678.5.5 0 0 1 .54-.456Z" />
+                    <path
+                      d="M4.81 1.37A6.5 6.5 0 0 1 14.56 7a.5.5 0 1 1-1 0 5.5 5.5 0 0 0-8.25-4.765.5.5 0 0 1-.5-.865Zm-.89 1.257a.5.5 0 0 1 .04.706A5.478 5.478 0 0 0 2.56 7a.5.5 0 0 1-1 0c0-1.664.626-3.184 1.655-4.333a.5.5 0 0 1 .706-.04ZM1.915 8.02a.5.5 0 0 1 .346.616l-.779 2.767a.5.5 0 1 1-.962-.27l.778-2.767a.5.5 0 0 1 .617-.346Zm12.15.481a.5.5 0 0 1 .49.51c-.03 1.499-.161 3.025-.727 4.533l-.07.187a.5.5 0 0 1-.936-.351l.07-.187c.506-1.35.634-2.74.663-4.202a.5.5 0 0 1 .51-.49" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-1 md:mb-2">Branding and Identity</h3>
+                <p class="text-gray-700">Develop a strong brand presence through cohesive branding and identity
+                  solutions, including color schemes, typography, and visual elements.</p>
+              </div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+              <div>
+                <div
+                  class="relative flex items-center justify-center w-20 h-20 max-sm:mb-2 text-black p-6 bg-[#f32b81] rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000]">
+                  <!-- icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-palette-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M12.433 10.07C14.133 10.585 16 11.15 16 8a8 8 0 1 0-8 8c1.996 0 1.826-1.504 1.649-3.08-.124-1.101-.252-2.237.351-2.92.465-.527 1.42-.237 2.433.07M8 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m4.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3M5 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-1 md:mb-2">Print Design</h3>
+                <p class="text-gray-700">Design eye-catching print materials such as business cards, brochures, posters,
+                  and banners that effectively communicate your message.</p>
+              </div>
+            </div>
+
+            <!-- Service Card 4 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+              <div>
+                <div
+                  class="relative flex items-center justify-center w-20 h-20 max-sm:mb-2 text-black p-6 bg-blue-400 rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000]">
+                  <!-- icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="inline-block" width="32" height="32"
+                    viewBox="0 0 512 512">
+                    <rect stroke="currentColor" x="32" y="64" width="448" height="320" rx="32" ry="32"
+                      style="fill:none;stroke-linejoin:round;stroke-width:32px" />
+                    <polygon fill="currentColor" points="304 448 296 384 216 384 208 448 304 448"
+                      style="stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                    <line stroke="currentColor" x1="368" y1="448" x2="144" y2="448"
+                      style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px" />
+                    <path fill="currentColor"
+                      d="M32,304v48a32.09,32.09,0,0,0,32,32H448a32.09,32.09,0,0,0,32-32V304Zm224,64a16,16,0,1,1,16-16A16,16,0,0,1,256,368Z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-1 md:mb-2">Digital Design</h3>
+                <p class="text-gray-700">Craft visually appealing digital designs for websites, social media, and online
+                  marketing materials to enhance your online presence.</p>
+              </div>
+            </div>
+
+            <!-- Service Card 5 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+              <div>
+                <div
+                  class="relative flex items-center justify-center w-20 h-20 max-sm:mb-2 text-black p-6 bg-red-300 rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000]">
+                  <!-- icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-brush-fill" viewBox="0 0 16 16">
+                    <path
+                      d="M15.825.12a.5.5 0 0 1 .132.584c-1.53 3.43-4.743 8.17-7.095 10.64a6.067 6.067 0 0 1-2.373 1.534c-.018.227-.06.538-.16.868-.201.659-.667 1.479-1.708 1.74a8.118 8.118 0 0 1-3.078.132 3.659 3.659 0 0 1-.562-.135 1.382 1.382 0 0 1-.466-.247.714.714 0 0 1-.204-.288.622.622 0 0 1 .004-.443c.095-.245.316-.38.461-.452.394-.197.625-.453.867-.826.095-.144.184-.297.287-.472l.117-.198c.151-.255.326-.54.546-.848.528-.739 1.201-.925 1.746-.896.126.007.243.025.348.048.062-.172.142-.38.238-.608.261-.619.658-1.419 1.187-2.069 2.176-2.67 6.18-6.206 9.117-8.104a.5.5 0 0 1 .596.04z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-1 md:mb-2">Illustration</h3>
+                <p class="text-gray-700">Create unique and captivating illustrations for various purposes, including
+                  book covers, editorial content, and digital media.</p>
+              </div>
+            </div>
+
+            <!-- Service Card 6 -->
+            <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+              <div>
+                <div
+                  class="relative flex items-center justify-center w-20 h-20 max-sm:mb-2 text-black p-6 bg-lime-300 rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000]">
+                  <!-- icon -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-front"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2zm5 10v2a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-2v5a2 2 0 0 1-2 2z" />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-1 md:mb-2">UI/UX Design</h3>
+                <p class="text-gray-700">Design user-friendly and visually appealing interfaces for websites and
+                  applications, focusing on enhancing the overall user experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="bg-white border-b-2 border-black pb-16">
+      <div class="container px-4 lg:px-8 mx-auto">
+        <h2 class="text-3xl font-bold mb-8">Testimonios</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial -->
+          <div
+            class="bg-[#00a6a2] py-6 px-8 rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000] transform duration-700 opacity-0 translate-y-20"
+            data-view="!opacity-100 !translate-y-0">
+            <div class="flex items-center gap-4 mb-4">
+              <img src="src/img/davis.jpg" alt="Client 1"
+                class="w-12 h-12 rounded-full inline-block border-2 border-black bg-yellow-300">
+              <div class="inline-block">
+                <h3 class="text-lg font-bold">David</h3>
+                <p class="text-gray-600">Don vergas</p>
+              </div>
+            </div>
+            <!-- rating -->
+            <div class="flex mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+            </div>
+            <p class="text-gray-700">ese wey es una farsa no lo contraten</p>
+          </div>
+
+          <!-- Testimonial -->
+          <div
+            class="bg-[#00a6a2] py-6 px-8 rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000] transform duration-700 opacity-0 translate-y-20 delay-200"
+            data-view="!opacity-100 !translate-y-0">
+            <div class="flex items-center gap-4 mb-4">
+              <img src="src/img/milton.jpg" alt="Client 2"
+                class="w-12 h-12 rounded-full inline-block border-2 border-black bg-yellow-300">
+              <div class="inline-block">
+                <h3 class="text-lg font-bold">Compadre</h3>
+                <p class="text-gray-600">Canta bonito</p>
+              </div>
+            </div>
+            <!-- rating -->
+            <div class="flex mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+            </div>
+            <p class="text-gray-700">a toda madre</p>
+          </div>
+
+          <!-- Testimonial -->
+          <div
+            class="bg-[#00a6a2] py-6 px-8 rounded-lg border-2 border-black shadow-[6px_6px_0_0_#000000] transform duration-700 opacity-0 translate-y-20 delay-500"
+            data-view="!opacity-100 !translate-y-0">
+            <div class="flex items-center gap-4 mb-4">
+              <img src="src/img/avatars/avatar3.jpg" alt="Client 3"
+                class="w-12 h-12 rounded-full inline-block border-2 border-black bg-yellow-300">
+              <div class="inline-block">
+                <h3 class="text-lg font-bold">Jennifer</h3>
+                <p class="text-gray-600">Bird Corp</p>
+              </div>
+            </div>
+            <!-- rating -->
+            <div class="flex mb-2">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="#fedf63" viewBox="0 0 24 24" stroke="currentColor"
+                class="h-6 w-6 inline-block">
+                <polygon fill="#fedf63"
+                  points="12 2 15.092 8.82 22 9.18 17 14 18.182 21.82 12 17.6 5.818 21.82 7 14 2 9.18 8.908 9.18">
+                </polygon>
+              </svg>
+            </div>
+            <p class="text-gray-700">Exceptional design skills and a pleasure to work with. [Roman] consistently
+              delivers high-quality results.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section style="background-image: url(src/img/cartographer.png);" class="bg-[#2196f3] text-white py-16">
+      <div class="container px-4 lg:px-8 mx-auto">
+        <div class="text-center transform duration-1000 opacity-0 scale-75 delay-100"
+          data-view="!opacity-100 !scale-100">
+          <h2 class="text-3xl font-bold mb-4">Contactame</h2>
+          <p class="text-lg mb-8">If you're interested in working together or have any further questions, feel free to
+            contact us.</p>
+
+          <a class="py-3 px-4 relative inline-flex flex-row items-center justify-center gap-x-4 rounded font-bold text-lg tracking-[.00714em] border-2 border-black hover:-translate-y-0.5 transform duration-200 shadow-[4px_4px_0_0_#000000] focus:-translate-y-0.5 bg-yellow-300 text-black"
+            href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+              class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+              <path
+                d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+            </svg>
+            Whatsappeame!
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8">
+    <div class="container px-4 lg:px-8 mx-auto">
+      <div class="flex flex-col max-md:text-center md:flex-row max-md:justify-center gap-8 md:justify-between">
+        <nav class="flex flex-col sm:flex-row max-md:mx-auto">
+          <a href="#" class="max-sm:py-2 px-2">Privacy Policy</a>
+          <a href="#" class="max-sm:py-2 px-2">Terms of Use</a>
+          <a href="#" class="max-sm:py-2 px-2">Guideline</a>
+        </nav>
+        <p>Roman Andreas &copy; 2024 | All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button
+    class="w-10 h-10 flex items-center justify-center bg-white border-2 border-black text-black rounded-full opacity-80 hover:opacity-100 fixed right-4 bottom-4"
+    data-backtop="#">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up mx-auto"
+      viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+    </svg>
+  </button>
+
+  <script src="src/js/script2.js"></script>
+</body>
+
+</html>
